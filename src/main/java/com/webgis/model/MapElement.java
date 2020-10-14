@@ -30,7 +30,7 @@ public class MapElement {
     /**
      * 地图元素位置点的的纬度
      */
-    private Double latitude;
+    public Double latitude;
 
     /**
      * 地图元素位置点的经度
@@ -41,4 +41,19 @@ public class MapElement {
      * 空间信息转换为字符串
      */
     public String geoStr;
+
+    public double getLongitude() {
+        return longitude;
+    }
+    public String setGeoStr(String geometryToString){
+        return geoStr;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
 }

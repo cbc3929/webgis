@@ -30,7 +30,7 @@ public class ControllerMap {
      */
     @PostMapping
     public MapElement addMapElement(@RequestBody MapElement mapElement) {
-        mapElement.geoStr(geometryToString(mapElement.Longitude(), mapElement.getLatitude()));
+        mapElement.setGeoStr(geometryToString(mapElement.getLongitude(), mapElement.getLatitude()));
         mapService.addMapElement(mapElement);
         Long id = mapElement.getId();
         return mapService.findById(id);
@@ -42,11 +42,10 @@ public class ControllerMap {
      */
     @DeleteMapping("/{id}")
     public Boolean deleteMapElement(@PathVariable Long id) {
-        Boolean deleteMapElementSuccess = true;
+        boolean deleteMapElementSuccess = true;
         try {
             mapService.deleteMapElement(id);
         } catch (Exception e) {
-            log.info("删除失败：" + e);
             deleteMapElementSuccess = false;
         }
         return deleteMapElementSuccess;
