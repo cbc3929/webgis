@@ -1,16 +1,23 @@
-package com.webgis.service;
+package com.webgis.mapper;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 import com.webgis.model.MapElement;
 
 import java.util.List;
 
+
 /**
  * @BelongProject:webgis
- * @BelongPackage:com.webgis.service
+ * @BelongPackage:com.webgis.mapper
  * @Author:cc
- * @CreateTime:2020-10-09-10-23
- * @Description:
+ * @CreateTime:2020-10-12-09-12
+ * @Description:地理元素映射
  */
-public interface MapService {
+@Mapper
+@Repository
+public interface MapElementMapper {
 
     /**
      * @return 返回全部的mapElement
@@ -30,7 +37,7 @@ public interface MapService {
     void addMapElement(MapElement mapElement);
 
     /**
-     * @param id
+     * @param id id
      * @return 依据id返回数据
      */
     MapElement findById(Long id);
@@ -50,9 +57,10 @@ public interface MapService {
      * 圆形区域查找
      * @param geometry 地理信息
      * @param radius 区域半径，单位为km
-     * @return 以给定点为原型，radis为半径的区域中满足条件的元素的集合
+     * @return 以给定点为原型，radius为半径的区域中满足条件的元素的集合
      */
-    List<MapElement> findMapElementByCircle(String geometry, double radius);
+    List<MapElement> findMapElementByCircle(@Param("geometry") String geometry,
+                                            @Param("radius") double radius);
 
     /**
      * 多边形区域查找

@@ -48,4 +48,4 @@ public interface BeanUserMapper {
 
     public int UpdateBean(BeanUser beanUser);
 
-}
+} 

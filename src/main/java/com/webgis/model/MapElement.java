@@ -40,5 +40,5 @@ public class MapElement {
     /**
      * 空间信息转换为字符串
      */
-    private String geoStr;
+    public String geoStr;
 }
