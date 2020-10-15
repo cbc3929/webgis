@@ -28,7 +28,7 @@ public class ControllerMap {
      * @param mapElement
      * @return 添加的地理元素信息
      */
-    @PostMapping
+    @RequestMapping
     public MapElement addMapElement(@RequestBody MapElement mapElement) {
         mapElement.setGeoStr(geometryToString(mapElement.getLongitude(), mapElement.getLatitude()));
         mapService.addMapElement(mapElement);
@@ -129,7 +129,6 @@ public class ControllerMap {
 
 
     private String geometryToString(double longitude, double latitude) {
-        String geoStr = "POINT" + "(" + longitude + " " + latitude + ")";
-        return geoStr;
+        return "POINT" + "(" + longitude + " " + latitude + ")";
     }
 }
