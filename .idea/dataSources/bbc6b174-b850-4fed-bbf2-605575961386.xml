@@ -783,7 +783,7 @@ false Z
 false Zulu
 true posixrules
 </TimeZones>
-      <StartupTime>1602673181</StartupTime>
+      <StartupTime>1602835060</StartupTime>
     </root>
     <database id="2" parent="1" name="nyc">
       <ObjectId>18909</ObjectId>
@@ -793,7 +793,7 @@ true posixrules
       <ObjectId>13012</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>642</IntrospectionStateNumber>
+      <IntrospectionStateNumber>653</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|38469|38471|1
 sequence|table|46661|46663|1
@@ -848,7 +848,7 @@ sequence|table|46661|46663|1
       <Comment>standard public schema</Comment>
       <StateNumber>360</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>643</IntrospectionStateNumber>
+      <IntrospectionStateNumber>654</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="16" parent="3" name="btree">
@@ -1124,11 +1124,11 @@ sequence|table|46661|46663|1
 10=arwdDxt/10
 </Acl>
     </table>
-    <table id="52" parent="15" name="user_Info">
+    <table id="52" parent="15" name="user_info">
       <ObjectId>30280</ObjectId>
       <Comment>用户信息</Comment>
       <Owner>postgres</Owner>
-      <StateNumber>613</StateNumber>
+      <StateNumber>652</StateNumber>
     </table>
     <table id="53" parent="15" name="water">
       <ObjectId>46663</ObjectId>
@@ -18328,10 +18328,10 @@ r/10
       <ColNames>srid</ColNames>
       <Predicate>(srid &gt; 0) AND (srid &lt;= 998999)</Predicate>
     </check>
-    <column id="1417" parent="52" name="username">
+    <column id="1417" parent="52" name="user_name">
       <Position>1</Position>
       <DataType>varchar(60)|0s</DataType>
-      <StateNumber>612</StateNumber>
+      <StateNumber>645</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="1418" parent="52" name="realname">
@@ -18340,10 +18340,10 @@ r/10
       <StateNumber>612</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="1419" parent="52" name="password">
+    <column id="1419" parent="52" name="pass_word">
       <Position>3</Position>
       <DataType>varchar(50)|0s</DataType>
-      <StateNumber>612</StateNumber>
+      <StateNumber>648</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="1420" parent="52" name="id">

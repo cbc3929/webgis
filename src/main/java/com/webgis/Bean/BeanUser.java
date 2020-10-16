@@ -12,6 +12,7 @@ public class BeanUser {
     private Integer id;
     private String user_name;
     private String pass_word;
+    private String realname;
 
     public Integer getId() {
 
@@ -22,6 +23,11 @@ public class BeanUser {
     public void setId(Integer id) {
 
         this.id = id;
+
+    }
+    public String getReal_name(){
+
+        return realname;
 
     }
 
@@ -47,5 +53,8 @@ public class BeanUser {
 
         this.pass_word = pass_word;
 
+    }
+    public void setReal_name(String realname){
+        this.realname=realname;
     }
 }

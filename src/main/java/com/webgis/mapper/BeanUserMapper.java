@@ -20,7 +20,7 @@ public interface BeanUserMapper {
 
     //查询
 
-    @Select("select * from table_one where id=#{id}")
+    @Select("select * from user_info where id=#{id}")
 
     public BeanUser selectId(Integer id);
 
@@ -28,7 +28,7 @@ public interface BeanUserMapper {
 
     //删除
 
-    @Delete("delete from table_one where id=#{id}")
+    @Delete("delete from user_info where id=#{id}")
 
     public int deleteId(Integer id);
 
@@ -36,7 +36,7 @@ public interface BeanUserMapper {
 
     //插入
 
-    @Insert("insert into table_one(id,user_name,pass_word) values(#{id},#{user_name},#{pass_word})")
+    @Insert("insert into user_info(id,user_name,pass_word,realname) values(#{id},#{user_name},#{pass_word},#{realname})")
 
     public int insertBean(BeanUser beanUser);
 
@@ -44,7 +44,7 @@ public interface BeanUserMapper {
 
     //修改
 
-    @Update("update table_one set user_name=#{user_name},pass_word=#{pass_word} where id=#{id}")
+    @Update("update user_info set user_name=#{user_name},pass_word=#{pass_word},realname=#{realname} where id=#{id}")
 
     public int UpdateBean(BeanUser beanUser);
 

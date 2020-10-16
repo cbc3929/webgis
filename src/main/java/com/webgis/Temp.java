@@ -22,7 +22,7 @@ public class Temp {
     public static void main(String[] args)
     {
         //GeoServer的连接配置
-        String url = "http://localhost:9010/geoserver" ;
+        String url = "http://localhost:8080/geoserver" ;
         String username = "admin" ;
         String passwd = "geoserver" ;
 

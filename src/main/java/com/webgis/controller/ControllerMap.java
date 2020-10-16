@@ -70,7 +70,7 @@ public class ControllerMap {
      *
      * @return
      */
-    @GetMapping("list")
+    @GetMapping("/list")
     public List<MapElement> findAll() {
         return mapService.findAll();
     }
