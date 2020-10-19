@@ -1,0 +1,795 @@
+html,body,#cesiumContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: absolute;
+}
+/* 设置头部标题 */
+#header{
+    position: absolute;
+    width: 26%;
+    height: 12%;
+    top: 10px;
+    left: 7px;
+    background:url("img/logo_border_img.png") no-repeat;
+    background-size: 100% 100%;
+    cursor: default;
+    text-align: center;
+
+    
+   
+}
+#header p{
+    /* width: 100%;
+    height: 100%; */
+    font-family:HuXiaoBo-NanShen;
+    font-size: 1.5vw;
+    text-align: center;
+    line-height: 6vh;
+    /* line-height: 170%; */
+    color: #B4E5FF;
+    /* font-weight: 600; */
+    background: -webkit-linear-gradient(9deg, #C0FFF8 0%, #82e9fc 50%, #38c1fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* 设置底部坐标栏 */
+#bottom{
+    position: absolute;
+    width: 98%;
+    height: 4%;
+    bottom: 2%;
+    left: 1%;
+    border: 1px solid #69CCFF;
+   
+    background: rgba(0, 32, 62, 0.6);
+    line-height: 35px;
+    color: #69CCFF;
+}
+/* 右侧工具栏 */
+#toolbar
+{
+    position: absolute;
+    width: 50px;
+    height: 430px;
+    right: 21px;
+    top: 20px;
+    /* border: 0.1px solid #69CCFF; */
+    opacity: 0.4;
+    background: #00203E;
+    opacity: 0.85;
+    border-radius: 10px;
+    box-shadow: #69CCFF 0px 0px 10px 2px inset;
+    /* background-image: url('img/leftbottom.png'),
+    url(img/righttop.png),
+    url(img/rightbottom.png),
+    url(img/lefttop.png);
+    background-size: 3.5em;
+    background-repeat: no-repeat; 
+    background-position:bottom left, top right, bottom right, top left; */
+}
+#basetool{
+    position: absolute;
+    width: 17%;
+    height: 6%;
+    right: 2%;
+    bottom: 7%;
+    
+    
+}
+/* 基础功能栏 */
+.wrap-basetool{
+   width: 32px;
+   height: 32px;
+    float: left;
+    margin-right: 10px;
+    color: #A7CAE7;
+}
+.wrap-basetool:hover{
+    color: #69CCFF;
+}
+.tupian-basetool{
+    widows: 32px;;
+    height: 32px;
+    cursor:pointer;
+}
+.text{
+    /* width: 3.4%;
+    height: auto; */
+    font: bold 12px/20px '微软雅黑';
+    /* color: #A7CAE7; */
+    text-align: center;
+}
+#reset{
+    background-image: url('img/ic_reset_1.png');
+    background-size: 100% 100%;
+}
+#reset:hover{
+    background-image: url('img/ic_reset_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#zoomin{
+    background-image: url('img/ic_zoom\ in_1.png');
+    background-size: 100% 100%;
+    
+}
+#zoomin:hover{
+    background-image: url('img/ic_zoom\ in_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#zoomout{
+    margin-top: 2px;
+    background-image: url('img/ic_zoom\ out_1.png');
+    background-size: 100% 100%;
+}
+#zoomout:hover{
+    background-image: url('img/ic_zoom\ out_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#fullscreen{
+    background-image: url('img/ic_total\ graph_1.png');
+    background-size: 100% 100%;
+}
+#fullscreen:hover{
+    background-image: url('img/ic_total\ graph_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#pan{
+    background-image: url('img/ic_move_1.png');
+    background-size: 100% 100%;
+}
+#pan:hover{
+    background-image: url('img/ic_move_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#flat{
+    background-image: url('img/ic_level1_1.png');
+    background-size: 100% 100%;
+}
+#flat:hover{
+    background-image: url('img/ic_level_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#rotate{
+    background-image: url('img/ic_rotate_1.png');
+    background-size: 100% 100%;
+}
+#rotate:hover{
+    background-image: url('img/ic_rotatel_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#vrview{
+    background-image: url('img/ic_vr_1.png');
+    background-size: 100% 100%;
+}
+#vrview:hover{
+    background-image: url('img/ic_vrl_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 右侧工具栏 */
+.wrap-toolbar{
+    width: 56px;
+    height: 36px;
+     float: left;
+     padding-top: 25%;
+     /* left: 1px; */
+     cursor: pointer;
+     color: #A7CAE7;
+ }
+ .wrap-toolbar:hover{
+    color: #69E4FF;
+ }
+ .tupian-toolbar{
+     width:36px;
+     height:36px;
+    margin-left: 15%;
+     
+ }
+ .tupian-toolbar:hover{
+     cursor: pointer;
+ }
+ .text-toolbar{
+     width: 56px;
+     height:14px;
+    font-size: xx-small;
+    font-family: Microsoft YaHei;
+    margin-left: 5%;
+
+    
+ }
+ /* 右上工具栏样式，悬停样式 */
+ #switch-view{
+    
+     background-image: url('img/ic_view_1.png');
+ }
+ #switch-view:hover{
+    width:36px;
+     height: 36px;
+    background-image: url('img/ic_view_2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+ #measure{
+    
+    background-image: url('img/ic_measure_1.png');
+    
+}
+#measure:hover{
+    width:36px;
+     height: 36px;
+    background-image: url('img/ic_measure_2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#basedata{
+    background-image: url('img/ic_data_1\ .png');
+}
+#basedata:hover{
+    width:36px;
+     height: 36px;
+    background-image: url('img/ic_data_2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#plot{
+    background-image: url('img/ic_plot_1\ .png');
+}
+#plot:hover{
+    width:36px;
+     height: 36px;
+    background-image: url('img/ic_plot_2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#analyze{
+    background-image: url('img/ic_analyse_1.png');
+}
+#analyze:hover{
+    width:36px;
+     height: 36px;
+    background-image: url('img/ic_analyse_2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#query{
+    background-image: url('img/ic_search_1.png');
+}
+#query:hover{
+    width:36px;
+     height: 36px;
+    background-image: url('img/ic_search_2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#fly{
+    background-image: url('img/ic_fly\ through_1.png');
+}
+#fly:hover{
+    width:36px;
+     height: 36px;
+    background-image: url('img/ic_fly\ through_2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#system{
+    background-image: url('img/ic_setting_1.png');
+}
+#system:hover{
+    width:36px;
+     height: 36px;
+    background-image: url('img/ic_setting_2.png') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+/* 地图切换栏 */
+#mapswitch{
+    position: absolute;
+    width: 284px;
+    height: 570px;
+    top: 20px;
+    right: 111px;  
+    border: 1px solid #69CCFF;
+    opacity: 0.8;
+    background: #00203E;
+    color:#69CCFF ;
+   
+}
+#mapswitch p{
+   color: #69CCFF;
+   font-size: 14px;
+   font-family: MicrosoftYaHei;
+   font-weight: 400;
+}
+
+/* 切换地图 */
+.wrap-imagemap{
+    width: 71px;
+    height: 74px;
+     float: left;
+     cursor: pointer;
+    color:#597F9F;
+ }
+ .wrap-imagemap:hover{
+    color:#69E4FF;
+ }
+ .pic-switch{
+    width:60px;
+    height: 60px;
+   
+}
+#layer1{
+    background: url('img/map1.jpg');
+}
+#layer2{
+    background: url('img/map2.jpg');
+}
+#layer3{
+    background: url('img/map3.jpg');
+}
+#layer4{
+    background: url('img/map4.jpg');
+}
+#layer5{
+    background: url('img/street1.jpg');
+}
+#layer6{
+    background: url('img/street2.jpg');
+}
+#layer7{
+    background: url('img/street3.jpg');
+}
+#layer8{
+    background: url('img/street4.jpg');
+}
+#layer9{
+    background: url('img/map3.jpg');
+}
+#layer10{
+    background: url('img/street4.jpg');
+}
+#layer11{
+    background: url('img/map1.jpg');
+}
+.pic-switch:hover{
+    border: 1px solid #69E4FF;
+}
+.text-switch{
+    width: 71px;
+    height: 15px;
+    font-family: Microsoft YaHei;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: initial;
+}
+/* 在线离线按钮 */
+.model-1 .checkbox input:checked + label {
+    background: #00203E;
+  }
+  .model-1 .checkbox input:checked + label:after {
+    background: #FFD74D;
+  }
+  .model-1 span{
+     
+    width: 30px;
+    height: 15px;
+font-size: 14px;
+font-family: Microsoft YaHei;
+font-weight: 200;
+color: #69E4FF;
+  }
+  .s3title{
+    margin-right: 130px;
+    
+
+  }
+  
+  .checkbox {
+    position: relative;
+    display: inline-block;
+  }
+  .checkbox:after, .checkbox:before {
+    font-family: FontAwesome;
+    -webkit-font-feature-settings: normal;
+       -moz-font-feature-settings: normal;
+            font-feature-settings: normal;
+    -webkit-font-kerning: auto;
+       -moz-font-kerning: auto;
+            font-kerning: auto;
+    -webkit-font-language-override: normal;
+       -moz-font-language-override: normal;
+            font-language-override: normal;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-weight: normal;
+    text-rendering: auto;
+  }
+  .checkbox label {
+    width: 30px;
+    height: 15px;
+    background: #00253E;
+    position: relative;
+    display: inline-block;
+    border-radius: 4px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border:1px solid #69E4FF;
+    opacity: 0.8;
+  }
+  .checkbox label:after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 10px;
+    border-radius: 2px;
+    left: 0;
+    top: 2px;
+    z-index: 2;
+    background: #2678AF;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .checkbox input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .checkbox input:hover + label:after {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+  }
+  .checkbox input:checked + label:after {
+    left: 15px;
+  }
+  /* 关闭图标 */
+  #closeicon{
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      z-index: 999;
+      top: 0.1cm;
+      left: 260px;
+    background-image: url('img/Close.png');
+  }
+  hr{
+    border: #79E7FF 0.1px solid; width: 270px; opacity: 0.07;
+  }
+  /* 测量工具 */
+  #measuretool{
+      position: absolute;
+      width: 290px;
+      height: 264px;
+      top: 20px;
+      right: 111px;
+      background: #00203E;
+      opacity: 0.8;
+      /* display: none; */
+  }
+  #measuretool span{
+font-size: 14px;
+font-family: Microsoft YaHei;
+font-weight: 400;
+color: #69CCFF;
+opacity: 0.7;
+  }
+  .wrap-measure{
+      width: 60px;
+      height: 60px;
+      background: red;
+  }
+  #spacedistance{
+      background: url('img/ic_space_1.png');
+  }
+  #spacedistance:hover{
+    background-image: url('img/ic_space_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  #surface1{
+    background: url('img/ic_floor_1.png');
+  }
+  #surface1:hover{
+    background-image: url('img/ic_floor_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
+  #d2area{
+    background: url('img/ic_level_1.png');
+  }
+  #d2area:hover{
+    background-image: url('img/ic_level2_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  #d3area{
+    background: url('img/ic_floor area_1.png');
+  }
+  #d3area:hover{
+    background-image: url('img/ic_floor\ area_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  #profile1{
+    background: url('img/ic_profile1_1.png');
+  }
+  #profile1:hover{
+    background-image: url('img/ic_profile_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  #gaocha{
+    background: url('img/ic_height_1 .png');
+  }
+  #gaocha:hover{
+    background-image: url('img/ic_height_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  #angle{
+    background: url('img/ic_angle_1.png');
+  }
+  #angle:hover{
+    background-image: url('img/ic_angle_2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  #cor{
+    /* background: url('img/ic_level_1.png'); */
+  }
+  /* 分析功能 */
+  #analyzetool{
+      position: absolute;
+      width: 330px;
+      height: 440px;
+      top: 20px;
+      right: 111px;
+      background: #00203E;
+      opacity: 0.8;
+      /* display: none; */
+  }
+  #analyzetool span{
+    font-size: 14px;
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: #69CCFF;
+    opacity: 0.7;
+      }
+    .wrap-analyze{
+        
+        width: 150px;
+        height: 50px;
+        float: left;
+        margin-left: 10px;
+        margin-top: 10px;
+        cursor: pointer;
+        border: 1px solid #69CCFF;
+        
+    }
+    .wrap-analyze span{
+        padding-left: 47px;
+        line-height: 50px;
+        font-size: 15px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: #A7C9E7;
+    }
+    #sun{
+        background: url('img/ana_ic_sun.png');
+    }
+    #buffer{
+        background: url('img/ana_ic_buffer.png');
+    }
+    #compare{
+        background: url('img/ana_ic_compare.png');
+    }
+    #counter{
+        background: url('img/ana_ic_contour.png');
+    }
+    #grade{
+        background: url('img/ana_ic_grade.png');
+    }
+    #land{
+        background: url('img/ana_ic_land.png');
+    }
+    #layer{
+        background: url('img/ana_ic_layer.png');
+    }
+    #persp{
+        background: url('img/ana_ic_persp.png');
+    }
+    #profile{
+        background: url('img/ana_ic_profile.png');
+    }
+    #visible{
+        background: url('img/ana_ic_visible.png');
+    }
+    #volume{
+        background: url('img/ana_ic_volume.png');
+    }
+    #plottool{
+        position: absolute;
+      width: 330px;
+      height: 420px;
+      top: 20px;
+      right: 111px;
+      background: #00203E;
+      opacity: 0.8;
+      /* display: none; */
+    }
+    #dot{
+        background: url('img/ic_dot_1.png');
+    }
+    #dot:hover{
+        background-image: url('img/ic_dot_2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #dot{
+        background: url('img/ic_dot_1.png');
+    }
+    #movedot{
+        background: url('img/ic_move\ dot_1.png');
+    }
+    #movedot:hover{
+        background-image: url('img/ic_move\ dot_2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #spread{
+        background: url('img/ic_spread_1.png');
+    }
+    #spread:hover{
+        background-image: url('img/ic_spread_2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #haloline{
+        background: url('img/ic_halo\ line_1.png');
+    }
+    #haloline:hover{
+        background-image: url('img/ic_halo\ line_2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #moveline{
+        background: url('img/ic_move\ line_1.png');
+    }
+    #moveline:hover{
+        background-image: url('img/ic_move\ line_2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #shape{
+        background: url('img/ic_shape_1.png');
+    }
+    #shape:hover{
+        background-image: url('img/ic_shape_2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #scribe{
+        background: url('img/ic_scribe_1.png');
+    }
+    #scribe:hover{
+        background-image: url('img/ic_scribe_2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #chart{
+        background: url('img/ic_chart_1.png');
+    }
+    #chart:hover{
+        background-image: url('img/ic_chart_2.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* 系统设置 */
+    #systemset{
+        position: absolute;
+        width: 290px;
+        height: 510px;
+        top: 20px;
+        right: 111px;
+        background: #00203E;
+        opacity: 0.8;
+        /* display: none; */
+    }
+    #systemset p{
+        font-size: 16px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: #69CCFF;
+    }
+    .wrap-system{
+        width: 270px;
+        height: 34px;
+        background-color:rgba(105, 204, 255, 0.03);
+        opacity: 0.;
+        margin-left: 10px;
+        margin-top: 5px;
+        font-weight:bold;
+        cursor: pointer;
+       
+    }
+    #systemset span:hover{
+        color: #69CCFF;
+    }
+    #systemset span{
+        font-size: 15px;
+        font-family: Microsoft YaHei;
+        font-weight: 400;
+        color: #A7C9E7;
+        opacity: 1;
+    }
+    /* VR文字 */
+    #vrtext{
+        position: absolute;
+        bottom: 8%;
+        right: 2%;
+        width: 30px;
+        height: 15px;
+        font: bold 12px/20px '微软雅黑';
+        color: #A7CAE7;
+        text-align: center;
+    }
+    /* 鹰眼图 */
+    #overview {
+        z-index: 998;
+        width: 150px;
+        height: 150px;
+        position: absolute;
+        left:1%;
+       bottom: 7%;
+        
+    }
+    /* 地址查询 */
+    #placesearch{
+        position: absolute;
+        width: 330px;
+        height: 120px;
+        top: 20px;
+        right: 111px;
+        background: #00203E;
+        opacity: 0.8;
+        color: #69CCFF;
+        display: none;
+    }
+    /* 基础数据 */
+    #basedatatool{
+        position: absolute;
+        width: 330px;
+        height: 420px;
+        top: 20px;
+        right: 111px;
+        background: #00203E;
+        opacity: 0.8;
+        color: #69CCFF;
+        /* display: none; */
+    }
