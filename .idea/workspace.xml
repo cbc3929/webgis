@@ -20,10 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2c6bbdb-9370-45a9-9bb8-ae773ca041fc" name="Default Changelist" comment="整合前端">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bbc6b174-b850-4fed-bbf2-605575961386.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bbc6b174-b850-4fed-bbf2-605575961386.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/bbc6b174-b850-4fed-bbf2-605575961386/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/bbc6b174-b850-4fed-bbf2-605575961386/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__it_geosolutions_geoserver_manager_1_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/webgis/Javadll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webgis/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/webgis/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/webgis/Temp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/webgis/DemoApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/webgis/DemoApplication.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +90,7 @@
     <property name="project.structure.last.edited" value="库" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -94,28 +100,11 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.DemoApplication (1)">
-    <configuration name="DemoApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.webigs.DemoApplication" />
+    <configuration name="demo" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="C:/Program Files (x86)/Java/jre1.8.0_271" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="com.webgis.DemoApplication" />
       <module name="webgis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.webigs.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Temp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.webgis.Temp" />
-      <module name="webgis" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.webgis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -134,11 +123,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="应用程序.Temp" />
-      </list>
-    </recent_temporary>
+    <list>
+      <item itemvalue="Spring Boot.DemoApplication" />
+      <item itemvalue="Spring Boot.DemoApplication (1)" />
+      <item itemvalue="应用程序.demo" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SpringMvcView">
@@ -174,7 +163,10 @@
       <workItem from="1602835158970" duration="4749000" />
       <workItem from="1602842322775" duration="445000" />
       <workItem from="1603075085243" duration="7312000" />
-      <workItem from="1603098759683" duration="4393000" />
+      <workItem from="1603098759683" duration="7391000" />
+      <workItem from="1603182499167" duration="4677000" />
+      <workItem from="1603252271435" duration="1620000" />
+      <workItem from="1603254222919" duration="1066000" />
     </task>
     <task id="LOCAL-00001" summary="Default Changelist">
       <created>1602319766018</created>
@@ -239,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603098710787</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="整合前端">
+      <created>1603165628736</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603165628737</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,10 +291,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="424" y="326" key="#SQL_方言/0.0.1920.1040@0.0.1920.1040" timestamp="1602639841314" />
-    <state x="552" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603098880356">
+    <state x="552" y="20" width="1181" height="1020" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603254522477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="169" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603098880356" />
+    <state x="552" y="20" width="1181" height="1020" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603254522477" />
+    <state x="806" y="268" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1603254482914">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="806" y="268" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603254482914" />
     <state x="531" y="111" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1602317059898">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -312,10 +315,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602644555672" />
-    <state x="687" y="215" key="FileChooserDialogImpl" timestamp="1602319202209">
+    <state x="356" y="183" key="FileChooserDialogImpl" timestamp="1603254517828">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="687" y="215" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602319202209" />
+    <state x="356" y="183" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1603254517828" />
     <state x="764" y="418" key="Github.CreateGistDialog" timestamp="1602318315773">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -328,38 +331,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="835" y="153" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602318139518" />
-    <state width="1592" height="223" key="GridCell.Tab.0.bottom" timestamp="1603164269325">
+    <state width="1867" height="256" key="GridCell.Tab.0.bottom" timestamp="1603266159914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1592" height="223" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603164269325" />
-    <state width="1592" height="223" key="GridCell.Tab.0.center" timestamp="1603164269325">
+    <state width="1867" height="256" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603266159914" />
+    <state width="1867" height="256" key="GridCell.Tab.0.center" timestamp="1603266159914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1592" height="223" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603164269325" />
-    <state width="1592" height="223" key="GridCell.Tab.0.left" timestamp="1603164269325">
+    <state width="1867" height="256" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603266159914" />
+    <state width="1867" height="256" key="GridCell.Tab.0.left" timestamp="1603266159914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1592" height="223" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603164269325" />
-    <state width="1592" height="223" key="GridCell.Tab.0.right" timestamp="1603164269325">
+    <state width="1867" height="256" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603266159914" />
+    <state width="1867" height="256" key="GridCell.Tab.0.right" timestamp="1603266159914">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1592" height="223" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603164269325" />
-    <state width="1592" height="225" key="GridCell.Tab.1.bottom" timestamp="1602838656279">
+    <state width="1867" height="256" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603266159914" />
+    <state width="1592" height="223" key="GridCell.Tab.1.bottom" timestamp="1603266159886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1592" height="225" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602838656279" />
-    <state width="1592" height="225" key="GridCell.Tab.1.center" timestamp="1602838656279">
+    <state width="1592" height="223" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603266159886" />
+    <state width="1592" height="223" key="GridCell.Tab.1.center" timestamp="1603266159885">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1592" height="225" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602838656279" />
-    <state width="1592" height="225" key="GridCell.Tab.1.left" timestamp="1602838656279">
+    <state width="1592" height="223" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603266159885" />
+    <state width="1592" height="223" key="GridCell.Tab.1.left" timestamp="1603266159885">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1592" height="225" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602838656279" />
-    <state width="1592" height="225" key="GridCell.Tab.1.right" timestamp="1602838656279">
+    <state width="1592" height="223" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603266159885" />
+    <state width="1592" height="223" key="GridCell.Tab.1.right" timestamp="1603266159886">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1592" height="225" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602838656279" />
+    <state width="1592" height="223" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603266159886" />
     <state width="299" height="593" key="HiddenNamespacesPopup" timestamp="1601264669109">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -368,10 +371,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="437" y="200" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1602640586922" />
-    <state x="312" y="0" key="SettingsEditor" timestamp="1602738377623">
+    <state x="374" y="90" key="Maven.ArtifactSearchDialog" timestamp="1603248285923">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="312" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1602738377623" />
+    <state x="374" y="90" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1603248285923" />
+    <state x="312" y="0" key="SettingsEditor" timestamp="1603253904629">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="312" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1603253904629" />
     <state x="787" y="376" width="458" height="287" key="VCS.EditChangelistDialog" timestamp="1602640409541">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
