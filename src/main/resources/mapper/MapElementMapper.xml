@@ -87,5 +87,9 @@
 
     </select>
 
+    <select id="analysisPolygon" parameterType="String" resultMap="mdfdfd">
+
+    </select>
+
 
 </mapper>

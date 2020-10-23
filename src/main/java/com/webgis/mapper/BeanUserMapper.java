@@ -21,31 +21,27 @@ public interface BeanUserMapper {
     //查询
 
     @Select("select * from user_info where id=#{id}")
-
-    public BeanUser selectId(Integer id);
+    BeanUser selectId(Integer id);
 
 
 
     //删除
 
     @Delete("delete from user_info where id=#{id}")
-
-    public int deleteId(Integer id);
+    int deleteId(Integer id);
 
 
 
     //插入
 
     @Insert("insert into user_info(id,user_name,pass_word,realname) values(#{id},#{user_name},#{pass_word},#{realname})")
-
-    public int insertBean(BeanUser beanUser);
+    int insertBean(BeanUser beanUser);
 
 
 
     //修改
 
     @Update("update user_info set user_name=#{user_name},pass_word=#{pass_word},realname=#{realname} where id=#{id}")
-
-    public int UpdateBean(BeanUser beanUser);
+    int UpdateBean(BeanUser beanUser);
 
 } 
