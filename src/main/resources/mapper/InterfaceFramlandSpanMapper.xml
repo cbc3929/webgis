@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.webgis.mapper.InterfaceFramlandSpanMapper" >
+  <resultMap id="BaseResultMap" type="com.webgis.model.InterfaceFramlandSpan" >
+    <id column="gid" property="gid" jdbcType="INTEGER" />
+    <result column="tbbh" property="tbbh" jdbcType="VARCHAR" />
+    <result column="dlbm" property="dlbm" jdbcType="VARCHAR" />
+    <result column="dlmc" property="dlmc" jdbcType="VARCHAR" />
+    <result column="qsxz" property="qsxz" jdbcType="VARCHAR" />
+    <result column="qsdwdm" property="qsdwdm" jdbcType="VARCHAR" />
+    <result column="qsdwmc" property="qsdwmc" jdbcType="VARCHAR" />
+    <result column="zldwdm" property="zldwdm" jdbcType="VARCHAR" />
+    <result column="zldwmc" property="zldwmc" jdbcType="VARCHAR" />
+    <result column="gdlx" property="gdlx" jdbcType="VARCHAR" />
+    <result column="bsm" property="bsm" jdbcType="INTEGER" />
+    <result column="ysdm" property="ysdm" jdbcType="VARCHAR" />
+    <result column="jbnttbbh" property="jbnttbbh" jdbcType="VARCHAR" />
+    <result column="tbmj" property="tbmj" jdbcType="DOUBLE" />
+    <result column="jbntmj" property="jbntmj" jdbcType="DOUBLE" />
+    <result column="xzdwmj" property="xzdwmj" jdbcType="DOUBLE" />
+    <result column="lxdwmj" property="lxdwmj" jdbcType="DOUBLE" />
+    <result column="tkmj" property="tkmj" jdbcType="DOUBLE" />
+    <result column="tkxs" property="tkxs" jdbcType="DOUBLE" />
+    <result column="zldjdm" property="zldjdm" jdbcType="VARCHAR" />
+    <result column="dlbz" property="dlbz" jdbcType="VARCHAR" />
+    <result column="jbntlx" property="jbntlx" jdbcType="VARCHAR" />
+    <result column="pdjb" property="pdjb" jdbcType="VARCHAR" />
+    <result column="kclx" property="kclx" jdbcType="VARCHAR" />
+    <result column="kcdlbm" property="kcdlbm" jdbcType="VARCHAR" />
+    <result column="geom" property="geom" jdbcType="OTHER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    gid, tbbh, dlbm, dlmc, qsxz, qsdwdm, qsdwmc, zldwdm, zldwmc, gdlx, bsm, ysdm, jbnttbbh, 
+    tbmj, jbntmj, xzdwmj, lxdwmj, tkmj, tkxs, zldjdm, dlbz, jbntlx, pdjb, kclx, kcdlbm, 
+    geom
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from base_farmland_span_luhuo
+    where gid = #{gid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from base_farmland_span_luhuo
+    where gid = #{gid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.webgis.model.InterfaceFramlandSpan" >
+    insert into base_farmland_span_luhuo (gid, tbbh, dlbm, 
+      dlmc, qsxz, qsdwdm, 
+      qsdwmc, zldwdm, zldwmc, 
+      gdlx, bsm, ysdm, jbnttbbh, 
+      tbmj, jbntmj, xzdwmj, 
+      lxdwmj, tkmj, tkxs, zldjdm, 
+      dlbz, jbntlx, pdjb, 
+      kclx, kcdlbm, geom)
+    values (#{gid,jdbcType=INTEGER}, #{tbbh,jdbcType=VARCHAR}, #{dlbm,jdbcType=VARCHAR}, 
+      #{dlmc,jdbcType=VARCHAR}, #{qsxz,jdbcType=VARCHAR}, #{qsdwdm,jdbcType=VARCHAR}, 
+      #{qsdwmc,jdbcType=VARCHAR}, #{zldwdm,jdbcType=VARCHAR}, #{zldwmc,jdbcType=VARCHAR}, 
+      #{gdlx,jdbcType=VARCHAR}, #{bsm,jdbcType=INTEGER}, #{ysdm,jdbcType=VARCHAR}, #{jbnttbbh,jdbcType=VARCHAR}, 
+      #{tbmj,jdbcType=DOUBLE}, #{jbntmj,jdbcType=DOUBLE}, #{xzdwmj,jdbcType=DOUBLE}, 
+      #{lxdwmj,jdbcType=DOUBLE}, #{tkmj,jdbcType=DOUBLE}, #{tkxs,jdbcType=DOUBLE}, #{zldjdm,jdbcType=VARCHAR}, 
+      #{dlbz,jdbcType=VARCHAR}, #{jbntlx,jdbcType=VARCHAR}, #{pdjb,jdbcType=VARCHAR}, 
+      #{kclx,jdbcType=VARCHAR}, #{kcdlbm,jdbcType=VARCHAR}, #{geom,jdbcType=OTHER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.webgis.model.InterfaceFramlandSpan" >
+    insert into base_farmland_span_luhuo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="gid != null" >
+        gid,
+      </if>
+      <if test="tbbh != null" >
+        tbbh,
+      </if>
+      <if test="dlbm != null" >
+        dlbm,
+      </if>
+      <if test="dlmc != null" >
+        dlmc,
+      </if>
+      <if test="qsxz != null" >
+        qsxz,
+      </if>
+      <if test="qsdwdm != null" >
+        qsdwdm,
+      </if>
+      <if test="qsdwmc != null" >
+        qsdwmc,
+      </if>
+      <if test="zldwdm != null" >
+        zldwdm,
+      </if>
+      <if test="zldwmc != null" >
+        zldwmc,
+      </if>
+      <if test="gdlx != null" >
+        gdlx,
+      </if>
+      <if test="bsm != null" >
+        bsm,
+      </if>
+      <if test="ysdm != null" >
+        ysdm,
+      </if>
+      <if test="jbnttbbh != null" >
+        jbnttbbh,
+      </if>
+      <if test="tbmj != null" >
+        tbmj,
+      </if>
+      <if test="jbntmj != null" >
+        jbntmj,
+      </if>
+      <if test="xzdwmj != null" >
+        xzdwmj,
+      </if>
+      <if test="lxdwmj != null" >
+        lxdwmj,
+      </if>
+      <if test="tkmj != null" >
+        tkmj,
+      </if>
+      <if test="tkxs != null" >
+        tkxs,
+      </if>
+      <if test="zldjdm != null" >
+        zldjdm,
+      </if>
+      <if test="dlbz != null" >
+        dlbz,
+      </if>
+      <if test="jbntlx != null" >
+        jbntlx,
+      </if>
+      <if test="pdjb != null" >
+        pdjb,
+      </if>
+      <if test="kclx != null" >
+        kclx,
+      </if>
+      <if test="kcdlbm != null" >
+        kcdlbm,
+      </if>
+      <if test="geom != null" >
+        geom,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="gid != null" >
+        #{gid,jdbcType=INTEGER},
+      </if>
+      <if test="tbbh != null" >
+        #{tbbh,jdbcType=VARCHAR},
+      </if>
+      <if test="dlbm != null" >
+        #{dlbm,jdbcType=VARCHAR},
+      </if>
+      <if test="dlmc != null" >
+        #{dlmc,jdbcType=VARCHAR},
+      </if>
+      <if test="qsxz != null" >
+        #{qsxz,jdbcType=VARCHAR},
+      </if>
+      <if test="qsdwdm != null" >
+        #{qsdwdm,jdbcType=VARCHAR},
+      </if>
+      <if test="qsdwmc != null" >
+        #{qsdwmc,jdbcType=VARCHAR},
+      </if>
+      <if test="zldwdm != null" >
+        #{zldwdm,jdbcType=VARCHAR},
+      </if>
+      <if test="zldwmc != null" >
+        #{zldwmc,jdbcType=VARCHAR},
+      </if>
+      <if test="gdlx != null" >
+        #{gdlx,jdbcType=VARCHAR},
+      </if>
+      <if test="bsm != null" >
+        #{bsm,jdbcType=INTEGER},
+      </if>
+      <if test="ysdm != null" >
+        #{ysdm,jdbcType=VARCHAR},
+      </if>
+      <if test="jbnttbbh != null" >
+        #{jbnttbbh,jdbcType=VARCHAR},
+      </if>
+      <if test="tbmj != null" >
+        #{tbmj,jdbcType=DOUBLE},
+      </if>
+      <if test="jbntmj != null" >
+        #{jbntmj,jdbcType=DOUBLE},
+      </if>
+      <if test="xzdwmj != null" >
+        #{xzdwmj,jdbcType=DOUBLE},
+      </if>
+      <if test="lxdwmj != null" >
+        #{lxdwmj,jdbcType=DOUBLE},
+      </if>
+      <if test="tkmj != null" >
+        #{tkmj,jdbcType=DOUBLE},
+      </if>
+      <if test="tkxs != null" >
+        #{tkxs,jdbcType=DOUBLE},
+      </if>
+      <if test="zldjdm != null" >
+        #{zldjdm,jdbcType=VARCHAR},
+      </if>
+      <if test="dlbz != null" >
+        #{dlbz,jdbcType=VARCHAR},
+      </if>
+      <if test="jbntlx != null" >
+        #{jbntlx,jdbcType=VARCHAR},
+      </if>
+      <if test="pdjb != null" >
+        #{pdjb,jdbcType=VARCHAR},
+      </if>
+      <if test="kclx != null" >
+        #{kclx,jdbcType=VARCHAR},
+      </if>
+      <if test="kcdlbm != null" >
+        #{kcdlbm,jdbcType=VARCHAR},
+      </if>
+      <if test="geom != null" >
+        #{geom,jdbcType=OTHER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.webgis.model.InterfaceFramlandSpan" >
+    update base_farmland_span_luhuo
+    <set >
+      <if test="tbbh != null" >
+        tbbh = #{tbbh,jdbcType=VARCHAR},
+      </if>
+      <if test="dlbm != null" >
+        dlbm = #{dlbm,jdbcType=VARCHAR},
+      </if>
+      <if test="dlmc != null" >
+        dlmc = #{dlmc,jdbcType=VARCHAR},
+      </if>
+      <if test="qsxz != null" >
+        qsxz = #{qsxz,jdbcType=VARCHAR},
+      </if>
+      <if test="qsdwdm != null" >
+        qsdwdm = #{qsdwdm,jdbcType=VARCHAR},
+      </if>
+      <if test="qsdwmc != null" >
+        qsdwmc = #{qsdwmc,jdbcType=VARCHAR},
+      </if>
+      <if test="zldwdm != null" >
+        zldwdm = #{zldwdm,jdbcType=VARCHAR},
+      </if>
+      <if test="zldwmc != null" >
+        zldwmc = #{zldwmc,jdbcType=VARCHAR},
+      </if>
+      <if test="gdlx != null" >
+        gdlx = #{gdlx,jdbcType=VARCHAR},
+      </if>
+      <if test="bsm != null" >
+        bsm = #{bsm,jdbcType=INTEGER},
+      </if>
+      <if test="ysdm != null" >
+        ysdm = #{ysdm,jdbcType=VARCHAR},
+      </if>
+      <if test="jbnttbbh != null" >
+        jbnttbbh = #{jbnttbbh,jdbcType=VARCHAR},
+      </if>
+      <if test="tbmj != null" >
+        tbmj = #{tbmj,jdbcType=DOUBLE},
+      </if>
+      <if test="jbntmj != null" >
+        jbntmj = #{jbntmj,jdbcType=DOUBLE},
+      </if>
+      <if test="xzdwmj != null" >
+        xzdwmj = #{xzdwmj,jdbcType=DOUBLE},
+      </if>
+      <if test="lxdwmj != null" >
+        lxdwmj = #{lxdwmj,jdbcType=DOUBLE},
+      </if>
+      <if test="tkmj != null" >
+        tkmj = #{tkmj,jdbcType=DOUBLE},
+      </if>
+      <if test="tkxs != null" >
+        tkxs = #{tkxs,jdbcType=DOUBLE},
+      </if>
+      <if test="zldjdm != null" >
+        zldjdm = #{zldjdm,jdbcType=VARCHAR},
+      </if>
+      <if test="dlbz != null" >
+        dlbz = #{dlbz,jdbcType=VARCHAR},
+      </if>
+      <if test="jbntlx != null" >
+        jbntlx = #{jbntlx,jdbcType=VARCHAR},
+      </if>
+      <if test="pdjb != null" >
+        pdjb = #{pdjb,jdbcType=VARCHAR},
+      </if>
+      <if test="kclx != null" >
+        kclx = #{kclx,jdbcType=VARCHAR},
+      </if>
+      <if test="kcdlbm != null" >
+        kcdlbm = #{kcdlbm,jdbcType=VARCHAR},
+      </if>
+      <if test="geom != null" >
+        geom = #{geom,jdbcType=OTHER},
+      </if>
+    </set>
+    where gid = #{gid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.webgis.model.InterfaceFramlandSpan" >
+    update base_farmland_span_luhuo
+    set tbbh = #{tbbh,jdbcType=VARCHAR},
+      dlbm = #{dlbm,jdbcType=VARCHAR},
+      dlmc = #{dlmc,jdbcType=VARCHAR},
+      qsxz = #{qsxz,jdbcType=VARCHAR},
+      qsdwdm = #{qsdwdm,jdbcType=VARCHAR},
+      qsdwmc = #{qsdwmc,jdbcType=VARCHAR},
+      zldwdm = #{zldwdm,jdbcType=VARCHAR},
+      zldwmc = #{zldwmc,jdbcType=VARCHAR},
+      gdlx = #{gdlx,jdbcType=VARCHAR},
+      bsm = #{bsm,jdbcType=INTEGER},
+      ysdm = #{ysdm,jdbcType=VARCHAR},
+      jbnttbbh = #{jbnttbbh,jdbcType=VARCHAR},
+      tbmj = #{tbmj,jdbcType=DOUBLE},
+      jbntmj = #{jbntmj,jdbcType=DOUBLE},
+      xzdwmj = #{xzdwmj,jdbcType=DOUBLE},
+      lxdwmj = #{lxdwmj,jdbcType=DOUBLE},
+      tkmj = #{tkmj,jdbcType=DOUBLE},
+      tkxs = #{tkxs,jdbcType=DOUBLE},
+      zldjdm = #{zldjdm,jdbcType=VARCHAR},
+      dlbz = #{dlbz,jdbcType=VARCHAR},
+      jbntlx = #{jbntlx,jdbcType=VARCHAR},
+      pdjb = #{pdjb,jdbcType=VARCHAR},
+      kclx = #{kclx,jdbcType=VARCHAR},
+      kcdlbm = #{kcdlbm,jdbcType=VARCHAR},
+      geom = #{geom,jdbcType=OTHER}
+    where gid = #{gid,jdbcType=INTEGER}
+  </update>
+</mapper>

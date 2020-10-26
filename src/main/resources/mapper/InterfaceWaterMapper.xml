@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.webgis.mapper.InterfaceWaterMapper" >
+  <resultMap id="BaseResultMap" type="com.webgis.model.InterfaceWater" >
+    <id column="gid" property="gid" jdbcType="INTEGER" />
+    <result column="bsm" property="bsm" jdbcType="VARCHAR" />
+    <result column="xzqdm" property="xzqdm" jdbcType="VARCHAR" />
+    <result column="xzqmc" property="xzqmc" jdbcType="VARCHAR" />
+    <result column="szmc" property="szmc" jdbcType="VARCHAR" />
+    <result column="tybm" property="tybm" jdbcType="VARCHAR" />
+    <result column="bh" property="bh" jdbcType="VARCHAR" />
+    <result column="mc" property="mc" jdbcType="VARCHAR" />
+    <result column="yxsd" property="yxsd" jdbcType="VARCHAR" />
+    <result column="scsj" property="scsj" jdbcType="VARCHAR" />
+    <result column="sffq" property="sffq" jdbcType="VARCHAR" />
+    <result column="fqsj" property="fqsj" jdbcType="VARCHAR" />
+    <result column="dlbm" property="dlbm" jdbcType="VARCHAR" />
+    <result column="mj" property="mj" jdbcType="DOUBLE" />
+    <result column="dltbbsm" property="dltbbsm" jdbcType="VARCHAR" />
+    <result column="bz" property="bz" jdbcType="VARCHAR" />
+    <result column="geom" property="geom" jdbcType="OTHER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    gid, bsm, xzqdm, xzqmc, szmc, tybm, bh, mc, yxsd, scsj, sffq, fqsj, dlbm, mj, dltbbsm, 
+    bz, geom
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from water
+    where gid = #{gid,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from water
+    where gid = #{gid,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.webgis.model.InterfaceWater" >
+    insert into water (gid, bsm, xzqdm, 
+      xzqmc, szmc, tybm, 
+      bh, mc, yxsd, scsj, 
+      sffq, fqsj, dlbm, mj, 
+      dltbbsm, bz, geom)
+    values (#{gid,jdbcType=INTEGER}, #{bsm,jdbcType=VARCHAR}, #{xzqdm,jdbcType=VARCHAR}, 
+      #{xzqmc,jdbcType=VARCHAR}, #{szmc,jdbcType=VARCHAR}, #{tybm,jdbcType=VARCHAR}, 
+      #{bh,jdbcType=VARCHAR}, #{mc,jdbcType=VARCHAR}, #{yxsd,jdbcType=VARCHAR}, #{scsj,jdbcType=VARCHAR}, 
+      #{sffq,jdbcType=VARCHAR}, #{fqsj,jdbcType=VARCHAR}, #{dlbm,jdbcType=VARCHAR}, #{mj,jdbcType=DOUBLE}, 
+      #{dltbbsm,jdbcType=VARCHAR}, #{bz,jdbcType=VARCHAR}, #{geom,jdbcType=OTHER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.webgis.model.InterfaceWater" >
+    insert into water
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="gid != null" >
+        gid,
+      </if>
+      <if test="bsm != null" >
+        bsm,
+      </if>
+      <if test="xzqdm != null" >
+        xzqdm,
+      </if>
+      <if test="xzqmc != null" >
+        xzqmc,
+      </if>
+      <if test="szmc != null" >
+        szmc,
+      </if>
+      <if test="tybm != null" >
+        tybm,
+      </if>
+      <if test="bh != null" >
+        bh,
+      </if>
+      <if test="mc != null" >
+        mc,
+      </if>
+      <if test="yxsd != null" >
+        yxsd,
+      </if>
+      <if test="scsj != null" >
+        scsj,
+      </if>
+      <if test="sffq != null" >
+        sffq,
+      </if>
+      <if test="fqsj != null" >
+        fqsj,
+      </if>
+      <if test="dlbm != null" >
+        dlbm,
+      </if>
+      <if test="mj != null" >
+        mj,
+      </if>
+      <if test="dltbbsm != null" >
+        dltbbsm,
+      </if>
+      <if test="bz != null" >
+        bz,
+      </if>
+      <if test="geom != null" >
+        geom,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="gid != null" >
+        #{gid,jdbcType=INTEGER},
+      </if>
+      <if test="bsm != null" >
+        #{bsm,jdbcType=VARCHAR},
+      </if>
+      <if test="xzqdm != null" >
+        #{xzqdm,jdbcType=VARCHAR},
+      </if>
+      <if test="xzqmc != null" >
+        #{xzqmc,jdbcType=VARCHAR},
+      </if>
+      <if test="szmc != null" >
+        #{szmc,jdbcType=VARCHAR},
+      </if>
+      <if test="tybm != null" >
+        #{tybm,jdbcType=VARCHAR},
+      </if>
+      <if test="bh != null" >
+        #{bh,jdbcType=VARCHAR},
+      </if>
+      <if test="mc != null" >
+        #{mc,jdbcType=VARCHAR},
+      </if>
+      <if test="yxsd != null" >
+        #{yxsd,jdbcType=VARCHAR},
+      </if>
+      <if test="scsj != null" >
+        #{scsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sffq != null" >
+        #{sffq,jdbcType=VARCHAR},
+      </if>
+      <if test="fqsj != null" >
+        #{fqsj,jdbcType=VARCHAR},
+      </if>
+      <if test="dlbm != null" >
+        #{dlbm,jdbcType=VARCHAR},
+      </if>
+      <if test="mj != null" >
+        #{mj,jdbcType=DOUBLE},
+      </if>
+      <if test="dltbbsm != null" >
+        #{dltbbsm,jdbcType=VARCHAR},
+      </if>
+      <if test="bz != null" >
+        #{bz,jdbcType=VARCHAR},
+      </if>
+      <if test="geom != null" >
+        #{geom,jdbcType=OTHER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.webgis.model.InterfaceWater" >
+    update water
+    <set >
+      <if test="bsm != null" >
+        bsm = #{bsm,jdbcType=VARCHAR},
+      </if>
+      <if test="xzqdm != null" >
+        xzqdm = #{xzqdm,jdbcType=VARCHAR},
+      </if>
+      <if test="xzqmc != null" >
+        xzqmc = #{xzqmc,jdbcType=VARCHAR},
+      </if>
+      <if test="szmc != null" >
+        szmc = #{szmc,jdbcType=VARCHAR},
+      </if>
+      <if test="tybm != null" >
+        tybm = #{tybm,jdbcType=VARCHAR},
+      </if>
+      <if test="bh != null" >
+        bh = #{bh,jdbcType=VARCHAR},
+      </if>
+      <if test="mc != null" >
+        mc = #{mc,jdbcType=VARCHAR},
+      </if>
+      <if test="yxsd != null" >
+        yxsd = #{yxsd,jdbcType=VARCHAR},
+      </if>
+      <if test="scsj != null" >
+        scsj = #{scsj,jdbcType=VARCHAR},
+      </if>
+      <if test="sffq != null" >
+        sffq = #{sffq,jdbcType=VARCHAR},
+      </if>
+      <if test="fqsj != null" >
+        fqsj = #{fqsj,jdbcType=VARCHAR},
+      </if>
+      <if test="dlbm != null" >
+        dlbm = #{dlbm,jdbcType=VARCHAR},
+      </if>
+      <if test="mj != null" >
+        mj = #{mj,jdbcType=DOUBLE},
+      </if>
+      <if test="dltbbsm != null" >
+        dltbbsm = #{dltbbsm,jdbcType=VARCHAR},
+      </if>
+      <if test="bz != null" >
+        bz = #{bz,jdbcType=VARCHAR},
+      </if>
+      <if test="geom != null" >
+        geom = #{geom,jdbcType=OTHER},
+      </if>
+    </set>
+    where gid = #{gid,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.webgis.model.InterfaceWater" >
+    update water
+    set bsm = #{bsm,jdbcType=VARCHAR},
+      xzqdm = #{xzqdm,jdbcType=VARCHAR},
+      xzqmc = #{xzqmc,jdbcType=VARCHAR},
+      szmc = #{szmc,jdbcType=VARCHAR},
+      tybm = #{tybm,jdbcType=VARCHAR},
+      bh = #{bh,jdbcType=VARCHAR},
+      mc = #{mc,jdbcType=VARCHAR},
+      yxsd = #{yxsd,jdbcType=VARCHAR},
+      scsj = #{scsj,jdbcType=VARCHAR},
+      sffq = #{sffq,jdbcType=VARCHAR},
+      fqsj = #{fqsj,jdbcType=VARCHAR},
+      dlbm = #{dlbm,jdbcType=VARCHAR},
+      mj = #{mj,jdbcType=DOUBLE},
+      dltbbsm = #{dltbbsm,jdbcType=VARCHAR},
+      bz = #{bz,jdbcType=VARCHAR},
+      geom = #{geom,jdbcType=OTHER}
+    where gid = #{gid,jdbcType=INTEGER}
+  </update>
+</mapper>
